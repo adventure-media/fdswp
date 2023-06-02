@@ -1,0 +1,298 @@
+= 1.4.0 - 2023-05-01 =
+* Ticket badge PDF Editor for your customer. Use it as a name sign or venue badge
+* Ticket badge PDF download for the ticket
+* Each option display now the option key, that can be used as a placeholder on the ticket badge designer
+* Clean up additional output before the ticket PDF is generate, to prevent collision with the PDF output from other plugins that are echo or print_r information before.
+* Deprecated WooCommerce hook woocommerce_add_order_item_meta is removed
+* With bulk operation the PDF ticket attachments are cleaned up before processing the next order
+
+= 1.3.15 - 2023-04-23 =
+* New option on the product to make the name per ticket mandatory
+
+= 1.3.14 - 2023-04-14 =
+* Fix output of name counter on ticket
+* Fix URL path for the ticket detail view
+* New options (including label) to display the registered user value on the ticket
+
+= 1.3.13 - 2023-04-12 =
+* New option to define the ticket detail page path to display the ticket detail
+* Download link and ticket number on the email is now more visible
+* New webhook for usage of restricted code on order item
+
+= 1.3.12 - 2023-04-10 =
+* Distract free ticket scanner option
+* Force responsive for the ticket scanner view for better experience
+* Fix retrieving default value of an option
+
+= 1.3.11 - 2023-04-05 =
+* Fix validation meta data object for the ticket
+* Add new translation option for the ticket heading
+* Small performance improvement getting the codes for the backend
+* Added some checks for broken codes while retrieving them for the admin area
+
+= 1.3.10 - 2023-04-03 =
+* Fix for the ticket scanner access control description text
+* Add a new QR image in the backend to have the QR code with the public ticket number, that can be also used with the ticket scanner
+* WARNING: Default option value changed for "Clear the ticket number if the order was deleted, canceled or refunded"! The default is now: activated - what makes more sense
+
+= 1.3.9 - 2023-03-25 =
+* Fix for pages without correct timezone setting
+
+= 1.3.8 - 2023-03-24 =
+* Support for old WC added
+
+= 1.3.7 - 2023-03-23 =
+* Fix name per ticket display
+* Change the layout and heading of ordered items on the ticket details
+* Expiration warning on the ticket fixed for events without a end date
+
+= 1.3.6 - 2023-03-21 =
+* Remove the name per ticket from the product meta and moved it to the session
+* Session data for the name per ticket will be deleted after the purchase
+
+= 1.3.5 - 2023-03-20 =
+* Fix column customer if the order was deleted already
+* New option on the product to collect names for each sold ticket. The name will be printed on the ticket
+* Added new export column for the public ticket id
+* Your server timezone is used on the ticket scanner to determine the expiration status
+* New option to print all qr codes of the tickets for a product
+
+= 1.3.4 - 2023-03-09 =
+* Access to admin area can be controlled by roles
+* New option to prevent ticket beeing too early redeemed
+* Ticket scanner has now an option to automatically redeem the ticket after retrieving it
+
+= 1.3.3 - 2023-03-02 =
+* New option for variable products, you can exclude now variants to be treated like a ticket
+* Download option for the ICS calendar file within the product detail view
+* Adjusted the ICS File to use the timezone
+* Adjusted the ICS File - if no start time is set, it will be a day event
+* If the order was not paid or completet, then the payment order dates are not shown on the ticket
+* Fix for the missing end time on the ticket EXPIRE message
+
+= 1.3.2 - 2023-02-23 =
+* New option to display the ticket list name on the ticket
+* New option to display the ticket list description on the ticket
+* New option to display all purchased items of the order on the ticket
+* If the customer order note is emtpy, the quotes are nor displayed
+* Option area reposition some option to make it easier to find them
+* Optimize the PDF invoice print - still a problem if you have so many ticket numbers, that they cannot fit within one invoice page
+* Added optimization for plugin "PDF Invoices & Packing Slips for WooCommerce" and many tickets sold in one order
+* Delete ticket repaired
+
+= 1.3.1 - 2023-02-20 =
+* Fix ticket list delete and tickets
+* Add new option to have the purchase customer note on the ticket
+
+= 1.3.0 - 2023-02-15 =
+* Added support for plain permalinks for the ticket scanner
+* New option to hide the event date from the ticket
+* New option to activate a compatibility mode for the ticket urls in case you experience issues
+* Fixed color issue of the ticket title and event name, so that your theme is not overwriting it
+* Bug fix option to print the ticket number within the email to the buyer
+* Ticket PDF will have the ticket number and order id in the filename if downloaded
+* Label replacement for location used also on the product edit level
+* Wording optimized
+* Translation WPML added for English and German
+
+= 1.2.11 - 2023-01-22=
+* Display the public ticket id within the ticket admin detail view
+* Fix redeem max amount value on the ticket admin detail view for 1 time redeem allowed tickets
+* Display the purchase date within the ticket scanner
+* Expiration operation extended to the ticket scanner - premium feature
+
+= 1.2.10 - 2023-01-17 =
+* Fix product view
+* Rearrange the initial action and filter handler to be loaded
+* Replacing whitespace of the ticket number prefix with "_"
+
+= 1.2.9 - 2023-01-16 =
+* Fix on ticket scanner to re-enter the input field for barcode scanner
+* Optimization of classes and calls
+* Fix issues with wp-cli calls
+* Move Woocommerce handler to class
+* Add new option to display the customer name for a ticket within the admin area on the ticket table
+* Add new option to display the redeem counter and max value for a ticket within the admin area on the ticket table
+* Increased the template redirect, so that the ticket detail page will be loaded on more templates
+
+= 1.2.8 - 2023-01-08 =
+* CVV number will also be visible on the plain email template (which is often used by invoice plugins)
+* On plain mail or invoice plugins that are using the plain mail output, the hide ticket detail link will be also effective
+* The hide ticket detail link will be also effective on the WCPDF plugin output
+* PDF Download link will be visible also on the plain email template
+* On plain mail or invoice plugins that are using the plain mail output, the hide ticket PDF link will be also effective
+* Powered by sentence on the PDF ticket is shorten and the font size is set to 6pt
+* Added new placeholder for the amount of tickets purchased on one item to display the position: {TICKET_POSITION}
+* Add download button for PDF ticket to the ticket number details view
+
+= 1.2.7 - 2023-01-04 =
+* Fix of the missing ticket bug (one ticket or none ticket numbers where generated)
+* Ticket numbers are no longer automatically freed if the order was cancelled. Only if the option for this is activated.
+
+= 1.2.6 - 2023-01-03 =
+* Fix if no free tickets are available anymore, then the message will be shown instead of the ticket number
+* Fix the display on the support info
+* Small optimizations
+
+= 1.2.5 - 2022-12-31 =
+* Add more infos to the support information panel
+* Bug fix for redirect btn label
+* Fix table definition of ip list
+* Code size to 150 letters increased
+
+= 1.2.4 - 2022-12-26 =
+* Fix export of woocommerce ticket infos
+* Bug fix email
+
+= 1.2.3 - 2022-12-26 =
+* New option to display the confirmed status counter on the ticket scanner view. The confirmed status counter is increased with each validation check of the ticket number
+* New option to increase the confirmed validation check with a scan by the ticket scanner
+* Introduced multiple redeem option. New product option to allow more than one time a redeem operation within the scanner
+* Fixed bug to show the expired ticket warning
+* Display more ticket information within the ticket scanner
+* You can now enter date placeholder on the code prefix that will be replaced when the code is generated. Makes sense on the lists and product.
+* The list of ticket numbers is now sorted by the creation date descending, to find faster your new generated ticket numbers
+* Order processing optimized
+
+= 1.2.2 - 2022-12-10 =
+* If the order is cancelled, the used ticket codes will be freed up
+* Quantity check while adding ticket number to the order
+* Add stats to support area
+
+= 1.2.1 - 2022-11-30 =
+* Add input text field on the ticket scanner to use a keyboard or other external scanner
+* Fix Ajax loading
+
+= 1.2.0 - 2022-11-29 =
+* Add action for option update
+* Add new search option for registered user id
+* Allow spaces between the search commands (LIST:, ORDERID:, CVV:, STATUS:, REDEEMED:, USERID:)
+* Add new option "Clear the ticket number if the order was deleted or a refund triggered" to free up ticket numbers, if the order is cancelled or deleted
+* Add new option "Allow to redeem ticket only if it is paid" for your ticket scanner user too
+* Add new option "Display product variant name" to be shown on the ticket PDF
+* Add the new ticket elements also to the ticket scanner
+* Add new shortcode [sasoEventTicketsValidator_ticket_scanner] to have the ticket scanner rendered on your own page (security features are still executed)
+* Add new option to display registered ticket numbers in the user profile view
+* Add new option to display bought ticket numbers in the user profile view
+
+= 1.1.10 - 2022-11-21 =
+* Date format also for the event date
+* Layout PDF ticket optimized for small event description
+* Added support for product with variants
+
+= 1.1.9 - 2022-11-16 =
+* Added date and time format for ticket display to the client
+* New option to set the font size for the PDF ticket
+* Optimize ticket layout to have more space for event description
+* New option to remove the HTML elements on your short description and ticket info for the PDF ticket
+
+= 1.1.8 - 2022-11-09 =
+* Added more error handling to the PDF generation
+* Adopt the time within the ICS calendar file
+* Add location to the ICS calendar file
+
+= 1.1.7 - 2022-11-03 =
+* Fix ticket detail page
+
+= 1.1.6 - 2022-11-02 =
+* You can choose a role to restrict access to the ticket scanner page
+* Small bug fixes and optimizations
+
+= 1.1.5 - 2022-10-31 =
+* Tickets will be created only if the payment was completed or in processing. This should prevent tickets for failed payments.
+
+= 1.1.4 - 2022-10-26 =
+* Hide ticket and serial code information if the order is not paid
+
+= 1.1.3 - 2022-10-14 =
+* Catch deleted orders on the ticket detail view
+* Adopted scanner page to reflect the errors while retrieving and redeeming tickets
+* Fix error message for new products
+* Removed Product Flyer button from the product edit page for *new* products
+
+= 1.1.2 - 2022-10-09 =
+* New scanner page displays the redeemed tickets if not dedicated in the options
+* Ticket scanner shows also created tickets with order date
+
+= 1.1.1 - 2022-10-06 =
+* JS redirect fixed
+* Fix clickable serial code in order view if more than one serial was added
+* Optimization to overall loading/exectution time
+
+= 1.1.0 - 2022-10-04 =
+* Changing the page for the ticket scanner
+* Add new option to add an URL for the QR code to be displayed
+* Add button to display the QR with an URL in it
+* Preview of QR image is now with the content visible
+* Add new filter for JS redirect "saso_eventtickets_getJSRedirectURL"
+
+= 1.0.12 - 2022-09-27 =
+* Add button to display the QR with just the ticket number in it
+* Add button to display the QR with URL to the PDF and ticket number in it
+* Add global redirect URL option for user who redeem their own tickets
+* Add translation option for ticket information on the detail view and PDF
+
+= 1.0.11 - 2022-09-22 =
+* Default value is changed to true for the option ro reuse not used ticket numbers within a ticket list assigned to a product
+* Fix ticket scanner URL
+
+= 1.0.10 - 2022-09-21 =
+* Add new information to the support area
+* Optimized the URL building for the ticket URLs
+
+= 1.0.9 - 2022-09-20 =
+* New field to see if the ticket is redeemed on the admin area
+* You can search and filter for redeemed tickets within the admin area REDEEMED:[1|0]
+* New option: Add the quantity of the purchase tickets of an item within an order to the ticket PDF.
+* New option: Define the text "quantity purchased tickets" for ticket PDF
+* Footer on the PDF font size decreased
+
+= 1.0.8 - 2022-09-14 =
+* Ticket scanner error message optimized
+* Ticket scanner scan and loading of the ticket optimized
+* Order status to redeem tickets set to "processing" and "complete"
+* Error message during redeem for #8003 optimized
+
+= 1.0.7 - 2022-08-22 =
+* Only ticket codes are generated, no longer restriction codes
+* Fix product formatter values
+* Remove product serial information with code deletion
+* Small Optimizations
+
+= 1.0.6 - 2022-08-19 =
+* Fix hanging ticket scanner
+
+= 1.0.5 - 2022-08-17 =
+* Serial code options removed
+* New option: Show event date on mail and pdf
+* New option: Show event date on product detail page
+
+= 1.0.4 - 2022-08-16 =
+* New option to hide your wordpress name and URL from PDF ticket
+* Newline in ticket info added
+* ICS calendar file can be attached to the WooCommerce mails
+* ICS calendar file can be downloaded on the detail page
+
+= 1.0.3 - 2022-08-12 =
+* New option to add a global logo to the ticket flyer
+* New option to add a global banner to the ticket flyer
+* New option to add background image to the ticket flyer
+* New option to add a global logo to the ticket PDF
+* New option to add a global banner to the ticket PDF
+* New option to add background image to the ticket PDF
+
+= 1.0.2 - 2022-08-09 =
+* New browser window open if clicked on the ticket detail view after purchase an event ticket
+* Add image for the ticket scanner to show if redeeming a ticket was successful or not
+* Code list at WooCommerce product detail is sorted now
+* Add PDF event flyer download with qr code
+* New option to hide your wordpress description from the flyer and PDF ticket
+* Allow HTML like on posts for event ticket short description and info text
+* Display price on ticket with currency and two decimal digits
+
+= 1.0.1 - 2022-08-07
+* HTML can be used on the ticket detail note and product description
+* Font changed to support arabic letters
+
+= 1.0.0 - 2022-08-05 =
+* Initial Public Release
